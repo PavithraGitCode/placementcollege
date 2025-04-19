@@ -1,30 +1,33 @@
-import "./App.css"
-import Header from "./components/common/header/Header"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import "./App.css" 
+import { BrowserRouter as Router,  Route, Routes, BrowserRouter } from "react-router-dom"
 import About from "./components/about/About"
 import CourseHome from "./components/allcourses/CourseHome"
 import Team from "./components/team/Team"
 import Pricing from "./components/pricing/Pricing"
 import Blog from "./components/blog/Blog"
-import Contact from "./components/contact/Contact"
-import Footer from "./components/common/footer/Footer"
+import Contact from "./components/contact/Contact" 
 import Home from "./components/home/Home"
+import Header from "./components/common/header/Header"
+import Footer from "./components/common/footer/Footer"
 function App() {
   return (
     <>
+     
+ 
       <Router>
         <Header />
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/about' component={About} />
-          <Route exact path='/courses' component={CourseHome} />
-          <Route exact path='/team' component={Team} />
-          <Route exact path='/pricing' component={Pricing} />
-          <Route exact path='/journal' component={Blog} />
-          <Route exact path='/contact' component={Contact} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} /> {/* Corrected line */}
+          <Route path="/courses" element={<CourseHome />} /> {/* Corrected line */}
+          <Route path="/team" element={<Team />} /> {/* Corrected line */}
+          <Route path="/pricing" element={<Pricing />} /> {/* Corrected line */}
+          <Route path="/journal" element={<Blog />} /> {/* Corrected line */}
+          <Route path="/contact" element={<Contact />} /> {/* Corrected line */}
+        </Routes>
         <Footer />
       </Router>
+ 
     </>
   )
 }

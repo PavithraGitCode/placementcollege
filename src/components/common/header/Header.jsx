@@ -1,10 +1,11 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link ,useNavigate} from "react-router-dom"
 import Head from "./Head"
 import "./header.css"
 
 const Header = () => {
   const [click, setClick] = useState(false)
+  const navigate=useNavigate()
 
   return (
     <>
@@ -12,26 +13,26 @@ const Header = () => {
       <header>
         <nav className='flexSB'>
           <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
-            <li>
+            <li onClick={()=>navigate('/')}>
               <Link to='/'>Home</Link>
             </li>
-            <li>
-              <Link to='/courses'>All Courses</Link>
+            <li onClick={()=>navigate('/courses')}>
+              <Link  >All Courses</Link>
             </li>
-            <li>
-              <Link to='/about'>About</Link>
+            <li onClick={()=>navigate('/about')}>
+              <Link  >About</Link>
             </li>
-            <li>
-              <Link to='/team'>Team</Link>
+            <li onClick={()=>navigate('/team')}>
+              <Link  >Students</Link>
             </li>
-            <li>
-              <Link to='/pricing'>Pricing</Link>
+            <li onClick={()=>navigate('/pricing')}>
+              <Link  >Pricing</Link>
             </li>
-            <li>
-              <Link to='/journal'>Journal</Link>
+            <li onClick={()=>navigate('/journal')}>
+              <Link  >Journal</Link>
             </li>
-            <li>
-              <Link to='/contact'>Contact</Link>
+            <li onClick={()=>navigate('/contact')}>
+              <Link  >Contact</Link>
             </li>
           </ul>
           <div className='start'>
