@@ -8,9 +8,7 @@ const RegisterPage = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [registrationError, setRegistrationError] = useState("");
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
- const navigate=useNavigate();
-   
-
+ const navigate=useNavigate(); 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
