@@ -1,35 +1,38 @@
-import "./App.css" 
-import { BrowserRouter as Router,  Route, Routes, BrowserRouter } from "react-router-dom"
-import About from "./components/about/About"
-import CourseHome from "./components/allcourses/CourseHome"
-import Team from "./components/team/Team"
-import Pricing from "./components/pricing/Pricing"
-import Blog from "./components/blog/Blog"
-import Contact from "./components/contact/Contact" 
-import Home from "./components/home/Home"
-import Header from "./components/common/header/Header"
-import Footer from "./components/common/footer/Footer"
+// App.js
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import About from "./components/about/About";
+import CourseHome from "./components/allcourses/CourseHome";
+import Team from "./components/team/Team";
+import Pricing from "./components/pricing/Pricing";
+import Blog from "./components/blog/Blog";
+import Contact from "./components/contact/Contact";
+import Home from "./components/home/Home";
+import LoginPage from "./components/loginpage/LoginPage";
+import Layout from './Layout'; // Import the Layout component
+import RegisterPage from "./components/loginpage/RegisterPage";
+
 function App() {
   return (
     <>
-     
- 
       <Router>
-        <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} /> {/* Corrected line */}
-          <Route path="/courses" element={<CourseHome />} /> {/* Corrected line */}
-          <Route path="/team" element={<Team />} /> {/* Corrected line */}
-          <Route path="/pricing" element={<Pricing />} /> {/* Corrected line */}
-          <Route path="/journal" element={<Blog />} /> {/* Corrected line */}
-          <Route path="/contact" element={<Contact />} /> {/* Corrected line */}
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} /> {/* Login page outside the Layout */}
+           {/* Login page outside the Layout */}
+          <Route path="/*" element={<Layout />}> {/* All other routes will use the Layout */}
+            <Route index element={<Home />} /> {/* Index route for / */}
+            <Route path="about" element={<About />} />
+            <Route path="courses" element={<CourseHome />} />
+            <Route path="team" element={<Team />} />
+            <Route path="pricing" element={<Pricing />} />
+            <Route path="journal" element={<Blog />} />
+            <Route path="contact" element={<Contact />} />
+          </Route>
         </Routes>
-        <Footer />
       </Router>
- 
     </>
-  )
+  );
 }
 
-export default App
+export default App;

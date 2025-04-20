@@ -1,6 +1,8 @@
 import React from "react"
+import { useNavigate } from "react-router-dom"
 
 const Head = () => {
+  const navigate=useNavigate()
   return (
     <>
       <section className='head'>
@@ -9,13 +11,15 @@ const Head = () => {
             <h1>ACADEMIA</h1>
             <span>ONLINE EDUCATION & LEARNING</span>
           </div>
-
-          <div className='social'>
-            <i className='fab fa-facebook-f icon'></i>
-            <i className='fab fa-instagram icon'></i>
-            <i className='fab fa-twitter icon'></i>
-            <i className='fab fa-youtube icon'></i>
-          </div>
+         
+           
+            <div className='button' onClick={()=>navigate('/login')}>
+               
+              <button>
+               Admin Login <i className='fa fa-long-arrow-alt-right'></i>
+              </button>
+            </div>
+          
         </div>
       </section>
     </>
