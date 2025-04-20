@@ -276,7 +276,6 @@ p {
 	display: flex;
 	align-items: center;
 }
-
 .login__input:active,
 .login__input:focus,
 .login__input:hover {
