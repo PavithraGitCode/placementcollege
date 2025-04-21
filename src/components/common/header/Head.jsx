@@ -9,14 +9,14 @@ const Head = () => {
         <div className='container flexSB'>
           <div className='logo'>
             <h1>ACADEMIA</h1>
-            <span>ONLINEss EDUCATION & LEARNING</span>
+            <span>ONLINE EDUCATION & LEARNING</span>
           </div>
          
            
             <div className='button' onClick={()=>navigate('/login')}>
                
               <button>
-               Admin Login <i className='fa fa-long-arrow-alt-right'></i>
+               Admins Login <i className='fa fa-long-arrow-alt-right'></i>
               </button>
             </div>
           
