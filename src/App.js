@@ -15,11 +15,11 @@ import RegisterPage from "./components/loginpage/RegisterPage";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="/placementcollege"> {/* Add the basename here */}
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} /> {/* Login page outside the Layout */}
-           {/* Login page outside the Layout */}
+            {/* Login page outside the Layout */}
           <Route path="/*" element={<Layout />}> {/* All other routes will use the Layout */}
             <Route index element={<Home />} /> {/* Index route for / */}
             <Route path="about" element={<About />} />
