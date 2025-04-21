@@ -12,7 +12,7 @@ const PriceCard = () => {
             {val.price}
           </h1>
           <p>{val.desc}</p>
-          <button className='outline-btn'>GET STARTEDjdsjkdsjsdjsdusduodsousduodsuosdiuo</button>
+          <button className='outline-btn'>GET STARTEDjdsjkdsjsdjsdusdudsdsdssdddodsousduodsuosdiuo</button>
         </div>
       ))}
     </>
