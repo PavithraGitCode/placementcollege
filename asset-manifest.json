@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/placementcollege/static/css/main.23465ed2.css",
-    "main.js": "/placementcollege/static/js/main.57fddf45.js",
+    "main.js": "/placementcollege/static/js/main.79d349c5.js",
     "static/media/back.webp": "/placementcollege/static/media/back.93d3f802b480eeabae07.webp",
     "static/media/awrapper.webp": "/placementcollege/static/media/awrapper.031ce77a398171427673.webp",
     "static/media/bg.webp": "/placementcollege/static/media/bg.baa1024a4ae092566a75.webp",
     "index.html": "/placementcollege/index.html",
     "main.23465ed2.css.map": "/placementcollege/static/css/main.23465ed2.css.map",
-    "main.57fddf45.js.map": "/placementcollege/static/js/main.57fddf45.js.map"
+    "main.79d349c5.js.map": "/placementcollege/static/js/main.79d349c5.js.map"
   },
   "entrypoints": [
     "static/css/main.23465ed2.css",
-    "static/js/main.57fddf45.js"
+    "static/js/main.79d349c5.js"
   ]
 }
