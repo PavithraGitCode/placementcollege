@@ -41,7 +41,7 @@ const LoginPage = () => {
                  
             console.log("Login successful:", data);
             localStorage.setItem("authToken", data.token);
-            navigate("/");
+            navigate("/admin/studentsList");
           } catch (jsonError) {
             console.error("Error parsing JSON:", jsonError);
             const textData = await response.text();

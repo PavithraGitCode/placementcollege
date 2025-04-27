@@ -11,15 +11,42 @@ import Home from "./components/home/Home";
 import LoginPage from "./components/loginpage/LoginPage";
 import Layout from './Layout'; // Import the Layout component
 import RegisterPage from "./components/loginpage/RegisterPage";
+import StudentsDetails from "./components/AdminPage/StudentsDetails";
+import AdminLayout from './AdminLayout'; // Import the AdminLayout
+import StudentsList from "./components/AdminPage/StudentsList";
+import StudentsForm from "./components/AdminPage/StudentForm";
+import { useState } from "react";
 
 function App() {
+  const [students, setStudents] = useState([]);
+
+  const addStudent = (newStudent) => {
+    setStudents([...students, newStudent]);
+  };
   return (
     <>
       <Router>
         <Routes>
+          {/* Public Routes */}
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} /> {/* Login page outside the Layout */}
-           {/* Login page outside the Layout */}
+          <Route path="/register" element={<RegisterPage />} />
+
+          {/* Admin Routes */}
+          <Route path="/admin/*" element={<AdminLayout />}>
+          <Route
+            path="studentsform"
+            element={<StudentsForm onAddStudent={addStudent} />}
+          />
+          <Route
+            path="studentslist"
+            element={<StudentsList students={students} />}
+          />
+
+             
+            
+          </Route>
+
+          {/* Main Layout Routes */}
           <Route path="/*" element={<Layout />}> {/* All other routes will use the Layout */}
             <Route index element={<Home />} /> {/* Index route for / */}
             <Route path="about" element={<About />} />
