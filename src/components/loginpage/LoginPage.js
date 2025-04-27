@@ -121,7 +121,7 @@ const LoginPage = () => {
 )()}
                 <div className="signup-text">
                   <h6>
-                    Don't have an account? <a href="/register">Sign up</a>
+                    Don't have an account? <a onClick={()=>navigate("/register")}>Sign up</a>
                   </h6>
                 </div>
               </form>

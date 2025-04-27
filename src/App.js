@@ -25,7 +25,7 @@ function App() {
   };
   return (
     <>
-      <Router>
+      <Router basename="/placementcollege"> {/* Add the basename here */}
         <Routes>
           {/* Public Routes */}
           <Route path="/login" element={<LoginPage />} />

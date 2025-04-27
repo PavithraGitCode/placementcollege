@@ -16,7 +16,7 @@ const Head = () => {
             <div className='button' onClick={()=>navigate('/login')}>
                
               <button>
-               Admin Login <i className='fa fa-long-arrow-alt-right'></i>
+               Admins Login <i className='fa fa-long-arrow-alt-right'></i>
               </button>
             </div>
           
